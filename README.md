@@ -80,6 +80,22 @@ Advantages:
 - Extensible: JWT can place custom attributes to provide more authorization information.
 </details>
 
+### Network Security
+
+<details id='sub-network'>
+  <summary><b>Sub network</b>: How to segment a large enterprise network into independent subnets for each department, while allowing inter-department communication?</summary>
+<br>
+<b>Answer:</b>  
+
+- Segmentation: Divide the network into subnets according to the estimated size of each department.
+- Linking: Determine the connectivity requirements between departments, estimate the traffic size, and set up sufficient routers.
+- Redundancy: Automatically switch to backup networks and routers when service disruption is detected.
+- Security:
+  - Set up firewalls between domains, open IP whitelist for communication, and retain network transmission records.
+  - IDS (Intrusion Detection System): Monitor network traffic to detect intrusion threats.
+  - IPS (Intrusion Prevention System): Monitor network devices to detect suspicious traffic and commands.
+</details>
+
 
 <!--Template
 <details id=''>
