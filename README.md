@@ -101,6 +101,7 @@ Advantages:
   <summary><b>Firewall</b>: Introduce common protection mechanisms of firewalls.</summary>
 <br>
 <b>Answer:</b>  
+
 - Layer 4 firewall
     - Allow specific IP addresses
     - Allow specific ports
