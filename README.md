@@ -97,6 +97,22 @@ Advantages:
 </details>
 
 
+<details id='firewall'>
+  <summary><b>Firewall</b>: Introduce common protection mechanisms of firewalls.</summary>
+<br>
+<b>Answer:</b>  
+- Layer 4 firewall
+    - Allow specific IP addresses
+    - Allow specific ports
+- Layer 7 firewall
+    - Allow specific URLs
+    - Allow specific headers
+    - Web application firewall
+        - Check for attack strings such as XSS, SQL injection, etc.
+    - Stateful firewall
+        - Record the behavior of this IP address before and after to determine if there is any risk.
+</details>
+
 <!--Template
 <details id=''>
   <summary><b></b>: </summary>
