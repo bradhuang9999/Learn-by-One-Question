@@ -116,7 +116,7 @@ Advantages:
 
 
 
-<details id=''>
+<details id='vpn'>
   <summary><b>VPN</b>: What are the advantages and disadvantages of using VPN in cloud architecture?</summary>
 <br>
 <b>Answer:</b>  
