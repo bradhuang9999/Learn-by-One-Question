@@ -114,6 +114,27 @@ Advantages:
         - Record the behavior of this IP address before and after to determine if there is any risk.
 </details>
 
+
+
+<details id=''>
+  <summary><b>VPN</b>: What are the advantages and disadvantages of using VPN in cloud architecture?</summary>
+<br>
+<b>Answer:</b>  
+
+Advantages:
+
+- It can establish secure encrypted connections over public networks.
+- It can establish communication between multiple private networks in different regions.
+- It allows remote workers to securely connect to private networks.
+- It can provide an additional layer of security protection for network applications.
+
+Disadvantages:
+
+- Encryption and decryption require computational resources, which can slow down transmission speed.
+- The technology is more complex and requires additional devices, resulting in higher management and setup costs.
+- VPN facilities are vulnerable to network attacks such as DDOS.
+</details>
+
 <!--Template
 <details id=''>
   <summary><b></b>: </summary>
