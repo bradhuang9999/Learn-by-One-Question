@@ -135,6 +135,23 @@ Disadvantages:
 - VPN facilities are vulnerable to network attacks such as DDOS.
 </details>
 
+
+<details id='xss'>
+  <summary><b>XSS</b>: Introduce the reflected, stored, and DOM-based XSS types, and what are the prevention methods for XSS risk?</summary>
+<br>
+<b>Answer:</b>  
+
+- Reflected: A type of XSS where a hyperlink URL, cookie, or form contains an XSS string. If the backend dynamically composes a frontend webpage with this data, the XSS program will be executed when the page is displayed.
+- Stored: A type of XSS where a database stores an XSS string, and when the database data is dynamically composed to form a frontend webpage, the webpage will execute the XSS program.
+- DOM-based: A type of XSS where an AJAX response returns an XSS string, and when this string is directly inserted into the webpage DOM, the webpage will execute the XSS program.
+
+**The prevention methods for XSS risk include:**
+
+- Using CSP (Content Security Policy) to limit the execution of risky content on webpages.
+- Performing HTML encoding on output data to avoid displaying risky content.
+- Checking the data transmitted to the backend to avoid using or storing risky content.
+</details>
+
 <!--Template
 <details id=''>
   <summary><b></b>: </summary>
