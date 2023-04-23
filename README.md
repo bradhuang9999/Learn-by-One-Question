@@ -1,6 +1,6 @@
 # Learn-by-one-question
 
-## Security
+<h2>Security</h2>
 
 <details id='defenseInDepth'>
   <summary><b>Defense in Depth</b>: What is defense in depth, what are its layers, and what are their respective definitions?</summary>
@@ -150,6 +150,48 @@ Disadvantages:
 - Using CSP (Content Security Policy) to limit the execution of risky content on webpages.
 - Performing HTML encoding on output data to avoid displaying risky content.
 - Checking the data transmitted to the backend to avoid using or storing risky content.
+</details>
+
+<h2 id="object-oriented">Object-Oriented</h2>
+
+### Solid Principles
+
+<details id='SRP'>
+  <summary><b>SRP</b>: Explain and give an example of the Single Responsibility Principle.</summary>
+<br>
+<b>Answer:</b>  
+
+A piece of code, such as a class, interface, or function, should only be responsible for a single responsibility in order to reduce coupling, improve readability, maintainability, and testability. For example, in a book order system, order management, order validation, and order SQL should be separated into different classes.
+</details>
+
+
+<details id='ISP'>
+  <summary><b>ISP</b>: Explain and give an example of the Interface Segregation Principle.</summary>
+<br>
+<b>Answer:</b>  
+
+In order to improve the readability and maintainability of code, classes should not be forced to implement methods that they do not need. Therefore, if in some cases, some methods of an interface are not needed to be implemented, that interface should be split into multiple interfaces. For example, if there is an interface called DataManager that is responsible for querying and modifying data, but in some cases only the querying methods is needed, then DataManager should be split into two interfaces: DataReader and DataModifier.
+</details>
+
+<details id='LSP'>
+  <summary><b>LSP</b>: What problems can occur if a subclass is not designed according to the Liskov substitution principle? How should a subclass be handled if it needs different functionality from its parent class?</summary>
+<br>
+<b>Answer:</b>  
+
+If a subclass is not designed according to the Liskov substitution principle, there may be conflicts with the behavior of the parent class that can cause errors in calling programs. A subclass should maintain the same behavior as its parent class, with additional details as needed. If different functionality is truly needed, it is best to create a new class instead of inheriting from the parent class.
+</details>
+
+<details id='OCP'>
+  <summary><b>OCP</b>: What are some ways to achieve the Open-Closed Principle?</summary>
+<br>
+<b>Answer:</b>  
+
+The Open-Closed Principle states that software entities should be open for extension but closed for modification. To achieve this principle, we can use inheritance, polymorphism, or design patterns, among other ways.
+
+Specifically, some common ways include:
+1. Inheritance: Subclasses can inherit existing functionality from parent classes and override only the differences. Implementing interfaces can also achieve similar results.
+2. Polymorphism: The same method can have different implementations depending on the input value. This allows for handling different cases without changing existing methods.
+3. There are many classic solutions in design patterns that are designed for flexible design, such as using the Builder pattern to provide a flexible way of building objects, using the Decorator pattern to dynamically add additional functionality, and using Dependency Injection to extract changing logic into independent interfaces that are implemented differently based on the input interface, resulting in different processing logic.
 </details>
 
 <!--Template
