@@ -154,7 +154,7 @@ Disadvantages:
 
 <h2 id="object-oriented">Object-Oriented</h2>
 
-### Solid Principles
+### SOLID Principles
 
 <details id='SRP'>
   <summary><b>SRP</b>: Explain and give an example of the Single Responsibility Principle.</summary>
@@ -192,6 +192,19 @@ Specifically, some common ways include:
 1. Inheritance: Subclasses can inherit existing functionality from parent classes and override only the differences. Implementing interfaces can also achieve similar results.
 2. Polymorphism: The same method can have different implementations depending on the input value. This allows for handling different cases without changing existing methods.
 3. There are many classic solutions in design patterns that are designed for flexible design, such as using the Builder pattern to provide a flexible way of building objects, using the Decorator pattern to dynamically add additional functionality, and using Dependency Injection to extract changing logic into independent interfaces that are implemented differently based on the input interface, resulting in different processing logic.
+</details>
+
+
+<details id='DIP'>
+  <summary><b>DIP</b>: How to implement the Dependency Inversion Principle?</summary>
+<br>
+<b>Answer:</b>  
+
+The Dependency Inversion Principle refers to the practice of high-level modules using interfaces instead of specific classes when interacting with components, in order to reduce coupling.
+There are two ways to implement this principle:
+
+1. Dependency Injection: Components specify the interfaces they return, and determine the implementation classes dynamically when used, instead of being determined by the high-level module. Alternatively, the component provides a setter method.
+2. Dependency Lookup: The container management mechanism, such as Spring, dynamically returns the implementation objects of the specified class.
 </details>
 
 <!--Template
