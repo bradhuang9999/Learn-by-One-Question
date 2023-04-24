@@ -152,6 +152,21 @@ Disadvantages:
 - Checking the data transmitted to the backend to avoid using or storing risky content.
 </details>
 
+<details id='CSRF'>
+  <summary><b>CSRF</b>: Can you give me an example scenario of a CSRF attack and explain how to prevent this attack?</summary>
+<br>
+<b>Answer:</b>  
+
+Example scenario:
+Background: A user is logged in to the target website, and the browser stores the website's cookie.
+Attack: The user visits a high-risk website that sends a request with attack content to the attacker's website through an image or hyperlink. As the request contains the cookie obtained during login, the target website trusts the request, and therefore falls victim to the attack.
+
+To prevent this attack, the following methods can be used:
+
+1. The server-side should check if the 'Origin' in the request header is from the same domain. If it fails, the request should be discarded.
+2. The server-side should generate a CSRF token when creating the webpage, which is stored in the session rather than a cookie. Each request must carry this token to determine if it is from the correct webpage.
+</details>
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles
