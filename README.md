@@ -167,6 +167,37 @@ To prevent this attack, the following methods can be used:
 2. The server-side should generate a CSRF token when creating the webpage, which is stored in the session rather than a cookie. Each request must carry this token to determine if it is from the correct webpage.
 </details>
 
+<details id='sql-injection'>
+  <summary><b>SQL Injection</b>: How to prevent SQL injection attacks?</summary>
+<br>
+<b>Answer:</b>  
+
+SQL injection attacks occur when untrusted variables are directly concatenated into SQL strings. If these variables contain attack content, the database may be attacked or unauthorized data may be retrieved. There are two ways to avoid SQL injection:
+
+1. Do not directly concatenate untrusted variables into SQL strings. Instead, use a component to pass variables. For example, in Java, PreparedStatement can be used to pass variables:
+    
+    Example of code with SQL injection risk:
+    
+    ```java
+    String title = request.getParameter("title"); // variable from front-end
+    String sql = "SELECT * FROM booking WHERE title = " + title;
+    Statement stmt = conn.createStatement();
+    stmt.executeQuery(sql);
+    ```
+    
+    Corrected example:
+    
+    ```java
+    String title = request.getParameter("title"); // variable from front-end
+    String sql = "SELECT * FROM booking WHERE title = ?";
+    PreparedStatement stmt = conn.prepareStatement(sql);
+    stmt.setString(1, title);
+    stmt.executeQuery();
+    ```
+    
+2. Check whether untrusted variables contain dangerous strings or unexpected content, such as single quotes, semicolons, etc. If they contain dangerous strings, throw an error or perform appropriate processing.
+</details>
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles
