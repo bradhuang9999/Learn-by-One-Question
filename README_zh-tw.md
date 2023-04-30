@@ -196,6 +196,24 @@ SQL injection 攻擊是指直接把不可信任的變數直接串上 SQL 字串�
 </details>
 
 
+<details id='csp'>
+  <summary><b>Content Security Policy</b>: Content Security Policy主要設定那些內容，並可以防範那些攻擊？</summary>
+<br>
+<b>Answer:</b>  
+
+Content Security Policy(CSP)可以分別設定各種資源允許載入的來源，以及是否允許inline js和css，也可以設定是否僅允許HTTPS請求。藉由CSP可以防範XSS, 跨站請求偽造等攻擊。
+</details>
+
+
+<details id='same-origin-policy'>
+  <summary><b>同源政策</b>: 簡介Same-origin policy，如果需要允許來自不同源頭的網頁相互訪問，該如何實現？</summary>
+<br>
+<b>Answer:</b>  
+
+Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網域的js存取目前網站的cookie, dom, localStorage, indexedDB，呼叫其他網域的ajax也會受到限制。以減少XSS, cookie洩漏等外部攻擊的風險。
+如果想要存取其他網域的資源，可以通過跨域資源共享(CORS)實現。CORS藉由response header增加Access-Control-Allow-Origin來允許其他網域的資源。
+</details>
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles

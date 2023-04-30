@@ -198,6 +198,24 @@ SQL injection attacks occur when untrusted variables are directly concatenated i
 2. Check whether untrusted variables contain dangerous strings or unexpected content, such as single quotes, semicolons, etc. If they contain dangerous strings, throw an error or perform appropriate processing.
 </details>
 
+
+<details id='csp'>
+  <summary><b>Content Security Policy</b>: What does Content Security Policy primarily set and what attacks can it prevent?</summary>
+<br>
+<b>Answer:</b>  
+
+Content Security Policy (CSP) can separately set the sources that various resources are allowed to load from, whether inline JS and CSS are allowed, and whether only HTTPS requests are allowed. CSP can prevent attacks such as XSS and CSRF.
+</details>
+
+
+<details id='same-origin-policy'>
+  <summary><b>Same-origin policy</b>: What is Same-origin policy and how can different web pages from different origins access each other?</summary>
+<br>
+<b>Answer:</b>  
+
+Same-origin policy is a browser security mechanism that prevents JavaScript from accessing cookies, DOM, localStorage, indexedDB from other domains. Calls to other domains using AJAX are also restricted to reduce the risk of XSS, cookie leakage, and other external attacks. To access resources from other domains, Cross-Origin Resource Sharing (CORS) can be used. CORS adds Access-Control-Allow-Origin to response headers to allow resources from other domains to be accessed.
+</details>
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles
