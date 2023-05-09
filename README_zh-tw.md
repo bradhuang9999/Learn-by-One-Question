@@ -133,6 +133,7 @@
 - VPN設施有被DDOS等網路攻擊的風險
 </details>
 
+### Web應用安全
 
 <details id='xss'>
   <summary><b>XSS</b>: 簡介XSS中的反射型、儲存型、DOM型，XSS風險的預防方式為何？</summary>
@@ -213,6 +214,39 @@ Content Security Policy(CSP)可以分別設定各種資源允許載入的來源�
 Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網域的js存取目前網站的cookie, dom, localStorage, indexedDB，呼叫其他網域的ajax也會受到限制。以減少XSS, cookie洩漏等外部攻擊的風險。
 如果想要存取其他網域的資源，可以通過跨域資源共享(CORS)實現。CORS藉由response header增加Access-Control-Allow-Origin來允許其他網域的資源。
 </details>
+
+
+### 加密算法
+
+<details id='SHA'>
+  <summary><b>SHA算法</b>: SHA演算法的簡介及用途</summary>
+<br>
+<b>Answer:</b>  
+
+簡介:
+- SHA (Security Hash Algorithm)演算法，是Hash算法。
+- 有多種SHA演算法的實現，例如SHA-1, SHA-2, SHA-3
+- 其目的為經由壓縮與轉換，以產生固定長度的摘要(digit)。
+- 其特性為同樣原文會產生固定的Hash值，且無法經由Hash值反推原文的內容。
+
+用途:
+- 數字簽名: 將內文產生hash值，並以私鑰進行加密合併內文傳送，用以驗證內文未被變造。
+- 密碼儲存: 將密碼轉為hash值存入資料庫。使用者登入時，將輸入的密碼轉換為Hash值進行比對驗證。即使駭客取得資料庫權限，由於資料庫中記錄的是無法還原的Hash值，因此可避免密碼外洩。
+</details>
+
+
+<details id='digital-signature'>
+  <summary><b>數位簽名</b>: 簡介數字簽名流程</summary>
+<br>
+<b>Answer:</b>  
+
+1. 產生端將原始文件內容以Hash算法產生數字摘要
+2. 產生端使用私鑰進行加密產生數字簽名
+3. 驗證端以公鑰進行解密數字簽名，還原得到數字摘要
+4. 驗證端將收到的文件內容以同樣Hash算法產生數字摘要
+5. 驗證端比對數字摘要是否一致，以判斷文件是完整的原始文件，且此文件是由信任的單位產生
+</details>
+
 
 <h2 id="object-oriented">Object-Oriented</h2>
 

@@ -135,6 +135,7 @@ Disadvantages:
 - VPN facilities are vulnerable to network attacks such as DDOS.
 </details>
 
+### Web Application Security
 
 <details id='xss'>
   <summary><b>XSS</b>: Introduce the reflected, stored, and DOM-based XSS types, and what are the prevention methods for XSS risk?</summary>
@@ -215,6 +216,37 @@ Content Security Policy (CSP) can separately set the sources that various resour
 
 Same-origin policy is a browser security mechanism that prevents JavaScript from accessing cookies, DOM, localStorage, indexedDB from other domains. Calls to other domains using AJAX are also restricted to reduce the risk of XSS, cookie leakage, and other external attacks. To access resources from other domains, Cross-Origin Resource Sharing (CORS) can be used. CORS adds Access-Control-Allow-Origin to response headers to allow resources from other domains to be accessed.
 </details>
+
+
+<details id='SHA'>
+  <summary><b>SHA算法</b>: SHA演算法的簡介及用途</summary>
+<br>
+<b>Answer:</b>  
+
+Introduction:
+- SHA (Security Hash Algorithm) is a type of Hash algorithm.
+- There are various implementations of SHA algorithms, such as SHA-1, SHA-2, SHA-3.
+- Its purpose is to generate a fixed-length digest (digit) by compression and transformation.
+- Its characteristic is that the same original text will produce a fixed Hash value, and the original content cannot be reverse-engineered from the Hash value.
+
+Application:
+- Digital signature: Generate a Hash value for the content, encrypt and merge the content with a private key, and send it to verify that the content has not been tampered with.
+- Password storage: Convert the password to a Hash value and store it in the database. When the user logs in, the input password is converted to a Hash value for comparison and verification. Even if a hacker obtains database access, the password cannot be leaked because the database stores an irreversibly hashed value.
+</details>
+
+
+<details id='digital-signature'>
+  <summary><b>Digital Signature</b>: Introduce the process of digital signature.</summary>
+<br>
+<b>Answer:</b>  
+
+1. The sender uses a Hash algorithm to generate a digital digest of the original file content.
+2. The sender encrypts the digital digest with their private key to create a digital signature.
+3. The recipient decrypts the digital signature using the sender's public key to obtain the digital digest.
+4. The recipient uses the same Hash algorithm to generate a digital digest of the received file content.
+5. The recipient compares the two digital digests to verify the file is the original, unaltered document and that it was created by a trusted source.
+</details>
+
 
 <h2 id="object-oriented">Object-Oriented</h2>
 
