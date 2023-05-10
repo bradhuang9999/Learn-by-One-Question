@@ -219,7 +219,7 @@ Same-origin policy is a browser security mechanism that prevents JavaScript from
 
 
 <details id='SHA'>
-  <summary><b>SHA算法</b>: SHA演算法的簡介及用途</summary>
+  <summary><b>SHA algorithm</b>: Introduction and application of SHA algorithm</summary>
 <br>
 <b>Answer:</b>  
 
