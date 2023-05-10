@@ -248,6 +248,20 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 </details>
 
 
+<details id='symmetric-encryption'>
+  <summary><b>對稱加密</b>: 說明對稱加密的優缺點及解決缺點的方式</summary>
+<br>
+<b>Answer:</b>  
+
+優點：加解密的速度較快，適合傳輸資料使用。
+缺點：由於加密與解密都是使用同一個金鑰，因此若使用網路傳輸金鑰，會有安全性的問題。
+可使用金鑰交換技術以安全的產生可溝通的金鑰，例如：
+
+- 使用RSA加密傳輸金鑰
+- Deffie-Hellman算法產生互相溝通的金鑰
+</details>
+
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles

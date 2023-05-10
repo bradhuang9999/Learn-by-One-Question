@@ -248,6 +248,19 @@ Application:
 </details>
 
 
+<details id='symmetric-encryption'>
+  <summary><b>Symmetric Encryption</b>: Explain the advantages and disadvantages of symmetric encryption and ways to address the drawbacks.</summary>
+<br>
+<b>Answer:</b>  
+
+Advantages: Symmetric encryption is fast for encrypting and decrypting data, making it suitable for data transmission.
+Disadvantages: Using the same key for encryption and decryption poses security risks when transmitting the key over the network.
+
+To address this, key exchange techniques can be used to securely generate communicable keys, such as:
+- Transmitting the key encrypted using RSA
+- Generating communicable keys using the Deffie-Hellman algorithm.
+</details>
+
 <h2 id="object-oriented">Object-Oriented</h2>
 
 ### SOLID Principles
