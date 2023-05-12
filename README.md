@@ -218,20 +218,47 @@ Same-origin policy is a browser security mechanism that prevents JavaScript from
 </details>
 
 
-<details id='SHA'>
-  <summary><b>SHA算法</b>: SHA演算法的簡介及用途</summary>
+<details id='symmetric-encryption'>
+  <summary><b>Symmetric Encryption</b>: Explain the advantages and disadvantages of symmetric encryption and ways to address the drawbacks.</summary>
+<br>
+<b>Answer:</b>  
+
+Advantages: Symmetric encryption is fast for encrypting and decrypting data, making it suitable for data transmission.
+Disadvantages: Using the same key for encryption and decryption poses security risks when transmitting the key over the network.
+
+To address this, key exchange techniques can be used to securely generate communicable keys, such as:
+- Transmitting the key encrypted using RSA
+- Generating communicable keys using the Deffie-Hellman algorithm.
+</details>
+
+<details id='asymmetric-encryption'>
+  <summary><b>Asymmetric Encryption</b>: Explain the advantages and disadvantages of symmetric encryption and ways to address the drawbacks.</summary>
+<br>
+<b>Answer:</b>  
+
+Advantages: Symmetric encryption is fast for encrypting and decrypting data, making it suitable for data transmission.
+Disadvantages: Using the same key for encryption and decryption poses security risks when transmitting the key over the network.
+To address this, key exchange techniques can be used to securely generate communicable keys, such as:
+
+- Transmitting the key encrypted using RSA
+- Generating communicable keys using the Deffie-Hellman algorithm.
+</details>
+
+<details id='hash-algorithm'>
+  <summary><b>Hash algorithm</b>: Introduction and applications of Hash algorithm</summary>
 <br>
 <b>Answer:</b>  
 
 Introduction:
-- SHA (Security Hash Algorithm) is a type of Hash algorithm.
-- There are various implementations of SHA algorithms, such as SHA-1, SHA-2, SHA-3.
-- Its purpose is to generate a fixed-length digest (digit) by compression and transformation.
+- The purpose of Hash algorithm is to generate a digest by compression and transformation.
 - Its characteristic is that the same original text will produce a fixed Hash value, and the original content cannot be reverse-engineered from the Hash value.
+- There are multiple implementations of Hash algorithm, such as MD5, SHA.
+- Some Hash algorithms are considered unsafe and should be avoided, such as MD5, SHA1. Hash algorithm should be carefully selected.
+- Salt can be used to increase the difficulty of cracking Hash algorithm.
 
-Application:
-- Digital signature: Generate a Hash value for the content, encrypt and merge the content with a private key, and send it to verify that the content has not been tampered with.
-- Password storage: Convert the password to a Hash value and store it in the database. When the user logs in, the input password is converted to a Hash value for comparison and verification. Even if a hacker obtains database access, the password cannot be leaked because the database stores an irreversibly hashed value.
+Applications:
+- Digital signature: Generate a hash value of the content, encrypt it with a private key, and send it with the content to verify that the content has not been tampered with.
+- Password storage: Convert the password into a Hash value and store it in a database. When the user logs in, the input password is converted to a Hash value for comparison and verification. Even if a hacker gains access to the database, the Hash value cannot be reversed, which can prevent password leakage.
 </details>
 
 
@@ -247,19 +274,6 @@ Application:
 5. The recipient compares the two digital digests to verify the file is the original, unaltered document and that it was created by a trusted source.
 </details>
 
-
-<details id='symmetric-encryption'>
-  <summary><b>Symmetric Encryption</b>: Explain the advantages and disadvantages of symmetric encryption and ways to address the drawbacks.</summary>
-<br>
-<b>Answer:</b>  
-
-Advantages: Symmetric encryption is fast for encrypting and decrypting data, making it suitable for data transmission.
-Disadvantages: Using the same key for encryption and decryption poses security risks when transmitting the key over the network.
-
-To address this, key exchange techniques can be used to securely generate communicable keys, such as:
-- Transmitting the key encrypted using RSA
-- Generating communicable keys using the Deffie-Hellman algorithm.
-</details>
 
 <h2 id="object-oriented">Object-Oriented</h2>
 

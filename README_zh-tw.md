@@ -218,16 +218,17 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 
 ### 加密算法
 
-<details id='SHA'>
-  <summary><b>SHA算法</b>: SHA演算法的簡介及用途</summary>
+<details id='hash-algorithm'>
+  <summary><b>Hash算法</b>: Hash演算法的簡介及用途</summary>
 <br>
 <b>Answer:</b>  
 
 簡介:
-- SHA (Security Hash Algorithm)演算法，是Hash算法。
-- 有多種SHA演算法的實現，例如SHA-1, SHA-2, SHA-3
-- 其目的為經由壓縮與轉換，以產生固定長度的摘要(digit)。
+- 其目的為經由壓縮與轉換，以產生摘要。
 - 其特性為同樣原文會產生固定的Hash值，且無法經由Hash值反推原文的內容。
+- 有多種Hash演算法的實現，例如MD5, SHA
+- 有些Hash算法已經被認為是不安全、應避免使用的。例如MD5, SHA1。應審慎選擇Hash算法
+- 可使用Salt以增加Hash算法的破解難度。
 
 用途:
 - 數字簽名: 將內文產生hash值，並以私鑰進行加密合併內文傳送，用以驗證內文未被變造。
@@ -249,7 +250,7 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 
 
 <details id='symmetric-encryption'>
-  <summary><b>對稱加密</b>: 說明對稱加密的優缺點及解決缺點的方式</summary>
+  <summary><b>對稱式加密</b>: 說明對稱式加密的優缺點及解決缺點的方式</summary>
 <br>
 <b>Answer:</b>  
 
@@ -261,6 +262,15 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 - Deffie-Hellman算法產生互相溝通的金鑰
 </details>
 
+
+<details id='asymmetric-encryption'>
+  <summary><b>非對稱式加密</b>: 在使用非對稱式加密時，何時需要使用公鑰，何時需要使用私鑰？請說明其中的差異與原因。</summary>
+<br>
+<b>Answer:</b>  
+
+非對稱式加密中，先產生一組公私鑰。私鑰並不會在網際網路上傳輸，而只會傳輸公鑰。對方取得公鑰後，私鑰擁有者以私鑰對訊行進行加密或簽章，對方若可以用對應公鑰成功解開，代表此訊息的確來自私鑰擁有者，並且訊息未經變照。
+總結來說，私鑰保持原地，並用於加密、簽章。公鑰傳輸對方，用來解密、驗證簽章。
+</details>
 
 <h2 id="object-oriented">Object-Oriented</h2>
 
