@@ -216,7 +216,30 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 </details>
 
 
-### 加密算法
+### 資料安全
+
+<details id='symmetric-encryption'>
+  <summary><b>對稱式加密</b>: 說明對稱式加密的優缺點及解決缺點的方式</summary>
+<br>
+<b>Answer:</b>  
+
+優點：加解密的速度較快，適合傳輸資料使用。
+缺點：由於加密與解密都是使用同一個金鑰，因此若使用網路傳輸金鑰，會有安全性的問題。
+可使用金鑰交換技術以安全的產生可溝通的金鑰，例如：
+
+- 使用RSA加密傳輸金鑰
+- Deffie-Hellman算法產生互相溝通的金鑰
+</details>
+
+
+<details id='asymmetric-encryption'>
+  <summary><b>非對稱式加密</b>: 在使用非對稱式加密時，何時需要使用公鑰，何時需要使用私鑰？請說明其中的差異與原因。</summary>
+<br>
+<b>Answer:</b>  
+
+非對稱式加密中，先產生一組公私鑰。私鑰並不會在網際網路上傳輸，而只會傳輸公鑰。對方取得公鑰後，私鑰擁有者以私鑰對訊行進行加密或簽章，對方若可以用對應公鑰成功解開，代表此訊息的確來自私鑰擁有者，並且訊息未經變照。
+總結來說，私鑰保持原地，並用於加密、簽章。公鑰傳輸對方，用來解密、驗證簽章。
+</details>
 
 <details id='hash-algorithm'>
   <summary><b>Hash算法</b>: Hash演算法的簡介及用途</summary>
@@ -249,28 +272,9 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 </details>
 
 
-<details id='symmetric-encryption'>
-  <summary><b>對稱式加密</b>: 說明對稱式加密的優缺點及解決缺點的方式</summary>
-<br>
-<b>Answer:</b>  
-
-優點：加解密的速度較快，適合傳輸資料使用。
-缺點：由於加密與解密都是使用同一個金鑰，因此若使用網路傳輸金鑰，會有安全性的問題。
-可使用金鑰交換技術以安全的產生可溝通的金鑰，例如：
-
-- 使用RSA加密傳輸金鑰
-- Deffie-Hellman算法產生互相溝通的金鑰
-</details>
 
 
-<details id='asymmetric-encryption'>
-  <summary><b>非對稱式加密</b>: 在使用非對稱式加密時，何時需要使用公鑰，何時需要使用私鑰？請說明其中的差異與原因。</summary>
-<br>
-<b>Answer:</b>  
 
-非對稱式加密中，先產生一組公私鑰。私鑰並不會在網際網路上傳輸，而只會傳輸公鑰。對方取得公鑰後，私鑰擁有者以私鑰對訊行進行加密或簽章，對方若可以用對應公鑰成功解開，代表此訊息的確來自私鑰擁有者，並且訊息未經變照。
-總結來說，私鑰保持原地，並用於加密、簽章。公鑰傳輸對方，用來解密、驗證簽章。
-</details>
 
 <h2 id="object-oriented">Object-Oriented</h2>
 
@@ -328,12 +332,3 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 2. 依賴尋找：使用例如Spring的容器管理機制，由容器動態回傳該類別的實作物件。
 </details>
 
-<!--Template
-<details id=''>
-  <summary><b></b>: </summary>
-<br>
-<b>Answer:</b>  
-
-
-</details>
--->
