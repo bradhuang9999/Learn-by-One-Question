@@ -277,7 +277,30 @@ Applications:
 
 
 
+<details id='https'>
+  <summary><b></b>: Describe the process of applying for, handshaking, and transmitting data in HTTPS.</summary>
+<br>
+<b>Answer:</b>  
 
+Apply for an SSL Certificate:
+1. The website generates a website public key (site.pub) and a website private key (site.key).
+2. The website uses the website private key and website information to generate a certificate signing request (CSR) file (site.csr) and provides it to the CA.
+3. The CA verifies the identity and uses the CA private key to sign the contents of the CSR, resulting in the generation of a website certificate (site.crt).
+4. The website provides the website certificate to the website administrator.
+
+Handshake Phase:
+1. The browser requests to establish an HTTPS connection with the website, and the website provides the website certificate (server.crt).
+2. The browser checks the validity of the certificate, including the expiration date and other certificate information.
+3. If the certificate's issuer is a CA trusted by the browser, the browser uses the CA's public key stored in its memory to decrypt the signature in server.crt. If the decryption is successful, it means the certificate is issued by a trusted CA. The decrypted signature provides the signature hash value of the certificate.
+4. The browser generates a hash value of the certificate data using the specified hash algorithm mentioned in the signature and compares it with the original hash value attached in the signature. If the two values match, it confirms that the data has not been tampered with.
+5. The browser generates a symmetric encryption key for secure communication, encrypts it using the website public key in site.crt, and sends it to the website.
+6. The website uses its website private key to decrypt the encrypted symmetric encryption key and obtains the symmetric encryption key.
+7. At this stage, both parties have completed mutual authentication and securely exchanged the symmetric encryption key.
+
+Transmission Phase:
+1. The browser encrypts the request using the symmetric encryption key and sends it to the server, which can decrypt it using the same key.
+2. The server encrypts the response using the symmetric encryption key and sends it back to the browser, which can decrypt it using the same key.
+</details>
 
 
 <h2 id="object-oriented">Object-Oriented</h2>
