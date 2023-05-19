@@ -217,7 +217,7 @@ Content Security Policy (CSP) can separately set the sources that various resour
 Same-origin policy is a browser security mechanism that prevents JavaScript from accessing cookies, DOM, localStorage, indexedDB from other domains. Calls to other domains using AJAX are also restricted to reduce the risk of XSS, cookie leakage, and other external attacks. To access resources from other domains, Cross-Origin Resource Sharing (CORS) can be used. CORS adds Access-Control-Allow-Origin to response headers to allow resources from other domains to be accessed.
 </details>
 
-### Data Security
+<h3 id='data-security'>Data Security</h3>
 
 <details id='symmetric-encryption'>
   <summary><b>Symmetric Encryption</b>: Explain the advantages and disadvantages of symmetric encryption and ways to address the drawbacks.</summary>
