@@ -302,6 +302,23 @@ Transmission Phase:
 2. The server encrypts the response using the symmetric encryption key and sends it back to the browser, which can decrypt it using the same key.
 </details>
 
+<details id='DH-algorithm'>
+  <summary><b>DH algorithm</b>: Explain the purpose and principle of the DH algorithm</summary>
+<br>
+<b>Answer:</b>  
+
+Diffie-Hellman (DH) algorithm is used to generate a secure communication key in an insecure network environment.
+
+Principle:
+1. Alice provides a set of large prime number p and a smaller exponent g for mod calculation to Bob.
+2. Alice and Bob independently generate secret numbers, a and b, which are not transmitted over the network.
+3. Alice calculates the public value A=(g^a)%p and shares it with Bob.
+4. Bob calculates the public value B=(g^b)%p and shares it with Alice.
+5. Alice computes the key K=(B^a)%p using the public value B provided by Bob and her secret number a.
+6. Bob computes the key K=(A^b)%p using the public value A provided by Alice and his secret number b.
+7. Since both parties use the same public values and secret numbers in their calculations, the resulting key K will be the same for both of them.
+8. With this shared key K, Alice and Bob can engage in secure encrypted communication.
+</details>
 
 <h2 id="object-oriented">Object-Oriented</h2>
 

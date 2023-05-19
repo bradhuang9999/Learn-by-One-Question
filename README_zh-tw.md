@@ -298,6 +298,24 @@ Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網�
 </details>
 
 
+<details id='DH-algorithm'>
+  <summary><b>DH算法</b>: 解釋DH算法的用途及原理</summary>
+<br>
+<b>Answer:</b>  
+
+Diffie-Hellman（DH）算法用於在不安全的網路環境中生成一組安全的溝通金鑰。
+原理：
+
+1. Alice方首先提供一組mod所用的大質數p和較小的指數g給Bob。
+2. Alice和Bob各自生成不會在網路中傳輸的私密數字a和b。
+3. Alice計算出公開值A=(g^a)%p，並將其提供給Bob。
+4. Bob計算出公開值B=(g^b)%p，並將其提供給Alice。
+5. Alice使用Bob提供的公開值B和自己的私密數字a計算出金鑰K=(B^a)%p。
+6. Bob使用Alice提供的公開值A和自己的私密數字b計算出金鑰K=(A^b)%p。
+7. 由於雙方使用相同的公開值和私密數字進行計算，因此最終生成的金鑰K將是相同的。
+8. 如此一來，Alice和Bob可以使用此金鑰進行安全的加密溝通。
+</details>
+
 
 <h2 id="object-oriented">Object-Oriented</h2>
 
