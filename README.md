@@ -278,7 +278,7 @@ Applications:
 
 
 <details id='https'>
-  <summary><b></b>: Describe the process of applying for, handshaking, and transmitting data in HTTPS.</summary>
+  <summary><b>HTTPS</b>: Describe the process of applying for, handshaking, and transmitting data in HTTPS.</summary>
 <br>
 <b>Answer:</b>  
 
